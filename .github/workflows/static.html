@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open URLs</title>
+    <script>
+        function openUrls() {
+            const urls = [
+                "https://www.google.com/",  // Replace with your first URL
+                "https://www.bing.com/"   // Replace with your second URL
+            ];
+
+            // Open the first URL
+            window.open(urls[0], "_blank");
+
+            // Set a timeout to open the second URL after 5 seconds
+            setTimeout(() => {
+                window.open(urls[1], "_blank");
+                // Attempt to close the landing page after opening the second URL
+                window.close();
+            }, 5000);
+        }
+
+        // Call the function when the page loads
+        window.onload = openUrls;
+    </script>
+</head>
+<body>
+    <h1>Opening URLs...</h1>
+    <p>Please wait while we open the links.</p>
+</body>
+</html>
